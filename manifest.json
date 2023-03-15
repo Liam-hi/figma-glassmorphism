@@ -1,0 +1,10 @@
+{
+  "name": "Glassmorphism",
+  "id": "1197106608665398190",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}

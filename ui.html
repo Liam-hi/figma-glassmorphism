@@ -1,0 +1,292 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+   * {
+    /* box-sizing: content-box; */
+  }
+
+  :root {
+    --rgb: 255, 255, 255;
+  }
+
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 50%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+  }
+
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 4px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    cursor: pointer;
+  }
+
+  body {
+/*     -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 100%;
+    font-size: 60px;
+    text-transform: uppercase;
+    z-index: -2;
+  }
+
+  .header-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .header-wrapper-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    color: #fff;
+  }
+
+  #box {
+    height:180px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* transform: rotate(6deg); */
+  }
+  .circle {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  }
+
+  .circle2 {
+    margin-left: 40px;
+    margin-bottom: 60px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
+  }
+
+  .circle3 {
+    margin-right: 90px;
+    margin-bottom: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  }
+
+  .circle4 {
+    margin-right: 90px;
+    margin-bottom: 30px;
+    height: 20px;
+    width: 0px;
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  }
+
+  .slidecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+
+  .output, .text, .text2, .pp {
+    display: none
+  }
+
+  #inputBox {
+  }
+
+  .button {
+    color: #fff;
+    margin-left: 10px;
+    height: 20px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+.button-container {
+  margin-top:50px;
+}
+
+.desc {font-size: 0.8rem;}
+
+</style>
+
+<div class="header">
+  <div class="circle3"></div>
+  <div class="circle"></div>
+  <div class="circle2"></div>
+  <div class="header-wrapper"><div id="box"></div></div><div class="header-wrapper-text"></div>
+</div>
+<center><p class="desc">Select a shape or vector layer to apply <br> glassmorphism effect</p></center>
+<div class="slidecontainer">
+  <p>Color</p>
+    <input type="color" id="head" name="head"
+           value="#ffffff">
+    <p>Transparency</p>
+    <input class="slider" type="range" id="inputBox" value="0" min="1" max="100">
+    <p>Blur</p>
+    <input class="slider" type="range" id="inputBox2" value="0" min="1" max="100">
+    <p>Outline</p>
+    <input class="slider" type="range" id="inputBox3" value="0" min="1" max="100">
+    <div class="button-container"><button class="button" id="applyOpacity">Apply</button></div>
+</div>
+<h1 id="output"></h1>
+<h1 id="text"></h1>
+<h1 id="text2"></h1>
+<h1 id="pp"></h1>
+<script>
+var transparencyValue = 0.1;
+var blurValue = 0;
+let root = document.documentElement;
+
+function hexToRGB(h) {
+  let r = 0, g = 0, b = 0;
+  if (h.length == 4) {
+    r = "0x" + h[1] + h[1];
+    g = "0x" + h[2] + h[2];
+    b = "0x" + h[3] + h[3];
+  } else if (h.length == 7) {
+    r = "0x" + h[1] + h[2];
+    g = "0x" + h[3] + h[4];
+    b = "0x" + h[5] + h[6];
+  }
+  return ""+ +r + "," + +g + "," + +b + "";
+}
+
+var colorValue = "#ffffff";
+var outlineValue = 0.1;
+
+let color = document.getElementById('head');
+let displaycolor = document.getElementById('pp');
+
+color.addEventListener('input', function () {
+  root.style.setProperty('--rgb', hexToRGB(color.value));
+  colorValue = hexToRGB(color.value);
+  }, false);
+
+  let i = document.getElementById('inputBox');
+  let o = document.getElementById('text');
+
+  i.addEventListener('input', function () {
+    var transparency = i.value / 100;
+    transparencyValue = transparency;
+    document.getElementById('box').style.background = `rgba(var(--rgb), ${transparency})`;
+    console.log(`rgba(var(--rgb), ${transparency})`);
+    console.log(document.getElementById('box').style);
+  }, false);
+  
+  let i_2 = document.getElementById('inputBox2');
+  let o_2 = document.getElementById('text2');
+  i_2.addEventListener('input', function () {
+    var blur = i_2.value / 5;
+    blurValue = blur;
+    document.getElementById('box').style['backdrop-filter'] = `blur(${blur}px)`;
+    document.getElementById('box').style['-webkit-backdrop-filter'] = `blur(${blur}px)`;
+    console.log(document.getElementById('box').style);
+  }, false);
+  let outline = document.getElementById('inputBox3');
+  outline.addEventListener('input', function () {
+    outlineValue = outline.value / 100;
+    document.getElementById('box').style.border = "1px solid "+`rgba(var(--rgb), ${outline.value / 100})`;
+    console.log(document.getElementById('box').style);
+  }, false);
+  
+  document.getElementById('applyOpacity').onclick = () => {
+    parent.postMessage({pluginMessage:{type: 'applyOpacity', transparencyValue, blurValue, colorValue, outlineValue}}, "*");
+  }
+</script>
+

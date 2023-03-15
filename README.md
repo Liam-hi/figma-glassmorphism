@@ -1,14 +1,14 @@
 ![alt text](https://github.com/Liam-hi/figma-glassmorphism/blob/master/media/cover-art.png?raw=true)
 
-# :recycle: Introduction
+## :recycle: Introduction
 
 Create beautiful, smooth glass effect in Figma. The glass effect can now be previewed directly in the canvas.
 
-# :construction: Beta
+## :construction: Beta
 
 Currently in beta.
 
-# :unlock: Development
+## :unlock: Development
 
 This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
 
@@ -26,11 +26,11 @@ Finally, in the directory of your plugin, get the latest type definitions for th
   npm install --save-dev @figma/plugin-typings
   
  
-# :railway_track: Inspiration
+## :railway_track: Inspiration
 
 [Glassmorphism in user interfaces](https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9)
 
-# :clipboard: License
+## :clipboard: License
 
 MIT
 

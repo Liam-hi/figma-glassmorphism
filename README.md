@@ -2,7 +2,9 @@
 
 ## :recycle: Introduction
 
-Create beautiful, smooth glass effect in Figma. The glass effect can now be previewed directly in the canvas.
+Glassmorphism is a popular design trend in user interface (UI) design that creates a frosted glass effect on elements such as buttons, panels, and cards. This effect is achieved by using blurred, semi-transparent backgrounds overlaid with elements that appear to be floating above the background. The result is a visually appealing, three-dimensional effect that creates a sense of depth and transparency in the UI design. Glassmorphism has gained popularity in recent years as it adds a modern, sleek look to UI designs.
+
+This plugin enables you to preview your design in real-time directly within the canvas.
 
 ## :construction: Beta
 

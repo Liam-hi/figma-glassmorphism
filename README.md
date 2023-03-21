@@ -1,4 +1,4 @@
-![alt text](https://github.com/Liam-hi/figma-glassmorphism/blob/master/media/cover-art.png?raw=true)
+![alt text](https://github.com/Liam-hi/figma-glassmorphism/blob/master/media/cover-large.png?raw=true)
 
 ## :recycle: Introduction
 

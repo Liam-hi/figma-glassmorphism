@@ -8,7 +8,7 @@ The Glassmorphism plugin was used by thousands of users within a short period of
 :speech_balloon: Why Glassmorphism and not Glassify?
 
 - This plugin enables you to preview the effect in real-time directly within the canvas.
-- This algorithm surpasses its predecessor, producing a more refined effect.
+- This algorithm surpasses its predecessor, producing a more refined end result.
 
 :dizzy: Introduction
 

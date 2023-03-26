@@ -15,9 +15,7 @@ import { emit } from '@create-figma-plugin/utilities'
 import { h, JSX } from 'preact'
 import { useCallback, useState } from 'preact/hooks'
 import styles from './base.css'
-
 import { CloseHandler, CreateRectanglesHandler } from './types'
-
 
 function Plugin() {
 
@@ -34,7 +32,6 @@ function Plugin() {
   
     return "255, 255, 255";
   }
-
 
   const [color, setColor] = useState('#ffffff');
   const [transparency, setTransparency] = useState<string>('0.18')
@@ -119,18 +116,17 @@ function Plugin() {
         <Text>
           <Muted>Color</Muted>
         </Text>
-        
         <input type="color" value={color} onInput={handleColorInput} />
         <Text>
           <Muted>Transparency</Muted>
         </Text>
         <input class={styles.slider}
-        type="range"
-        max={100}
-        min={0}
-        onInput={handleTransparencyInput}
-        value={transparency}
-      />
+          type="range"
+          max={100}
+          min={0}
+          onInput={handleTransparencyInput}
+          value={transparency}
+        />
         <Text>
           <Muted>Blur</Muted>
         </Text>
@@ -141,22 +137,17 @@ function Plugin() {
           onInput={handleBlurInput}
           value={blur}
         />
-
-
         <Text>
           <Muted>Outline</Muted>
         </Text>
         <input class={styles.slider}
-        type="range"
-        max={100}
-        min={0}
-        onInput={handleOutlineinput}
-        value={outline}
-      />
-
+          type="range"
+          max={100}
+          min={0}
+          onInput={handleOutlineinput}
+          value={outline}
+        />
         </div>
-
-      
         <Columns space="extraSmall">
           <Button fullWidth onClick={handleCreateRectanglesButtonClick} secondary>
             Create
@@ -165,10 +156,7 @@ function Plugin() {
             Close
           </Button>
         </Columns>
-
       </div>
-
-
   )
 }
 

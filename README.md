@@ -2,7 +2,7 @@
 
 :recycle: Refactor
 
-Due to the high demand and popularity of the Glassmorphism plugin, it has been refactored from vanilla JavaScript to Preact for easier maintenance. This change was made to ensure that the plugin remains reliable and efficient for the thousands of users who rely on it. I chose Preact over React because it is a lightweight framework, making it more suitable for a smaller application. 
+Due to the high demand and popularity of the Glassmorphism plugin, it has been refactored from vanilla JavaScript to Preact for easier maintenance. This change was made to ensure that the plugin remains reliable and efficient for the thousands of users who use it on a daily basis. I chose Preact over React because it is a lightweight framework, making it more suitable for a smaller application. 
 
 :speech_balloon: Why Glassmorphism and not Glassify?
 
